@@ -50,10 +50,6 @@ input {
   align-self: flex-end;
 }
 
-#recent-scores {
-  border: 2px solid black;
-}
-
 .ScoreContainer {
   display: flex;
   justify-content: space-between;

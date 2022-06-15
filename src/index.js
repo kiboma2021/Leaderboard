@@ -11,19 +11,15 @@ const allScores = [
   {"name":"Everton","Score":"76"}
 ];
 
-teamScores(allScores);
+var recentSores = document.querySelector('#recent-scores');
 
-var teamScores = data => {
-  var recentSores = document.querySelector('#recent-scores');
-
-  for (let i=0; i<data.length; i++) {
+  for (let i=0; i<allScores.length; i++) {
     var displayData = `<tr>
-    <td>${data.name}</td>
-    <td>${data.Score}</td>
+    <td>${allScores[i].name}</td>
+    <td>${allScores[i].Score}</td>
     </tr>
     `
     recentSores.innerHTML +=displayData;
   }
-}
 
-document.getElementById("heading").innerHTML = "I have changed!";
+document.getElementById("heading").innerHTML = "Leaderboard";
