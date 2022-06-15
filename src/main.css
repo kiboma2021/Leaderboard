@@ -61,6 +61,19 @@ table {
   width: 100%;
 }
 
+.table-heading {
+  background-color: black;
+  color: white;
+  align-self: flex-start;
+}
+
+th, td {
+  text-align: left;
+  padding: 4px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
 footer {
   position: fixed;
   bottom: 0;
