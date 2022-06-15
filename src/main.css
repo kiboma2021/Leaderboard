@@ -33,6 +33,7 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
 .add-score {
   display: flex;
   flex-direction: column;
@@ -67,12 +68,13 @@ table {
   align-self: flex-start;
 }
 
-th, td {
+th,
+td {
   text-align: left;
   padding: 4px;
 }
 
-tr:nth-child(even) {background-color: #f2f2f2;}
+tr:nth-child(even) { background-color: #f2f2f2; }
 
 footer {
   position: fixed;
@@ -93,7 +95,6 @@ footer {
   padding: 15px;
   width: 100%;
 }
-
 
 /* Desktop */
 @media only screen and (min-width: 768px) {
@@ -144,5 +145,4 @@ footer {
   .col-12 {
     width: 100%;
   }
-
 }
