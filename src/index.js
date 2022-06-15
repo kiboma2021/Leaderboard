@@ -13,7 +13,7 @@ const allScores = [
 
 teamScores(allScores);
 
-let teamScores = data => {
+var teamScores = data => {
   var recentSores = document.querySelector('#recent-scores');
 
   for (let i=0; i<data.length; i++) {
@@ -26,4 +26,4 @@ let teamScores = data => {
   }
 }
 
-document.getElementById("heading").innerHTML="Hey"
+document.getElementById("heading").innerHTML = "I have changed!";
