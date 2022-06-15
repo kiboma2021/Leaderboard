@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../src/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Leadership Board</title>
 </head>
 <body>
@@ -11,13 +13,37 @@
     <h1>Leaderboard </h1>
   </header>
 
-  <section>
+  <article class="row" id="scores">
+    <section class="col-4">
+      <div class="recent-score">
+        <h2>Recent scores</h2>
+        <i class="fa fa-refresh"></i>
+      </div>
+      <div>
+        <p>name1</p>
+      </div>
 
-  </section>
+    </section>
+
+    <section class="col-4">
+      <div>
+        <h2>Add Your score</h2>
+      </div>
+      <div class="add-score">
+        <input type="text" placeholder="Your name">
+        <input type="text" placeholder="Your score">
+        <button type="submit">Submit</button>
+      </div>
+    </section>
+
+  </article>
   <footer>
-    
+    <div class="footer">
+      <p>omayioben@gmail.com</p>
+      <h3>All rights reserved</h3>
+    </div>
   </footer>
   
-  <script src="../dist/main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
