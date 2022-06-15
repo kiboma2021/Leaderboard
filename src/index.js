@@ -2,10 +2,6 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import '@fortawesome/fontawesome-free/js/all.js';
 import './main.css';
 
-//Reference HTML
-const myInput = document.querySelector('input');
-const recentSores = document.querySelector('#recent-scores');
-
 const allScores = [
   {"name":"Man-City","Score":"80"},
   {"name":"Manchester United","Score":"75"},
@@ -15,3 +11,19 @@ const allScores = [
   {"name":"Everton","Score":"76"}
 ];
 
+teamScores(allScores);
+
+let teamScores = data => {
+  var recentSores = document.querySelector('#recent-scores');
+
+  for (let i=0; i<data.length; i++) {
+    var displayData = `<tr>
+    <td>${data.name}</td>
+    <td>${data.Score}</td>
+    </tr>
+    `
+    recentSores.innerHTML +=displayData;
+  }
+}
+
+document.getElementById("heading").innerHTML="Hey"
