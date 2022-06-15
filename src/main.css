@@ -51,6 +51,21 @@ input {
   align-self: flex-end;
 }
 
+#recent-scores {
+  border: 2px solid black;
+}
+
+.ScoreContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px;
+}
+
+table {
+  width: 100%;
+}
+
 footer {
   position: fixed;
   bottom: 0;
