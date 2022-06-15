@@ -38,12 +38,18 @@ header {
   flex-direction: column;
   justify-content: center;
   row-gap: 20px;
+  
 }
 
 input {
   height: 30px;
 }
 
+#submit {
+  height: 30px;
+  width: 80px;
+  align-self: flex-end;
+}
 
 footer {
   position: fixed;
