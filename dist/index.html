@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leadership Board</title>
+<script defer src="runtime.js"></script><script defer src="main.js"></script></head>
+<body>
+  <header>
+    <h1 id="heading" onclick="myFunction()">Leaderboard </h1>
+  </header>
+
+  <article class="row" id="scores">
+    <section class="col-4">
+      <div class="recent-score">
+        <h2>Recent scores</h2>
+        <i class="fa fa-refresh"></i>
+      </div>
+      <table class="table table-striped">
+        <tr class="bg-info">
+          <th>Name</th>
+          <th>Points</th>
+        </tr>
+        <tbody id="recent-scores">
+        
+        </tbody>
+      </table>
+
+    </section>
+
+    <section class="col-4">
+      <div>
+        <h2>Add Your score</h2>
+      </div>
+      <div class="add-score">
+        <input type="text" placeholder="Your name">
+        <input type="text" placeholder="Your score">
+        <button type="submit" id="submit">Submit</button>
+      </div>
+    </section>
+
+  </article>
+  <footer>
+    <div class="footer">
+      <p>omayioben@gmail.com</p>
+      <h3>All rights reserved</h3>
+    </div>
+  </footer>
+  
+  <script type="module" src="main.js"></script>
+</body>
+</html>
