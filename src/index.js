@@ -8,6 +8,7 @@ const refresh = document.querySelector('#refresh');
 const submit = document.querySelector('#submit');
 const nameInput = document.getElementById('name');
 const scoreInput = document.getElementById('score');
+const recentSores = document.querySelector('#recent-scores');
 
 const GenerateID = async () => {
   const response = await fetch(
@@ -48,32 +49,28 @@ const submitData = async () => {
 
 submit.addEventListener('submit', submitData);
 
+const getScore = (name, score) => {
+  const displayData = `<tr>
+  <td>${name}</td>
+  <td>${score}</td>
+  </tr>
+  `;
+  recentSores.innerHTML += displayData;
+};
 
+const receiveData = async () => {
+  const response = await fetch(
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/THNeemmj46ormQIqw0UT/scores',
+    {
+      method: 'GET',
+      header: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    },
+  );
+  const gameScore = await response.json();
+  getScore(nameInput.value, scoreInput.value);
+  return gameScore;
+};
 
-
-
-
-/*
-const get_url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ai5Nvjw0VJjtGbkLNuyF/scores/'
-
-async function getResult() {
-  const response = await fetch(get_url);
-  const data = await response.json();
-
-  console.log(data);
-  const recentSores = document.querySelector('#recent-scores');
-  const heading = document.getElementById('heading');
-  heading.textContent += 1;
-
-  for (let i = 0; i < 10; i++) {
-    const displayData = `<tr>
-      <td>${data[i]['user']}</td>
-      <td>${data[i]['score']}</td>
-      </tr>
-      `;
-    recentSores.innerHTML += displayData;
-  }
-}
-getResult();
-
-*/
+refresh.addEventListener('click', receiveData);
