@@ -34,6 +34,13 @@ header {
   align-items: center;
 }
 
+.recent-score:hover {
+  background-color: rgb(152, 152, 167);
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .add-score {
   display: flex;
   flex-direction: column;
@@ -49,6 +56,9 @@ input {
   height: 30px;
   width: 80px;
   align-self: flex-end;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
 }
 
 .ScoreContainer {
@@ -81,6 +91,11 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+#heading {
+  color: rgb(21, 21, 143);
+  text-shadow: 2px 2px red;
 }
 
 .footer {
