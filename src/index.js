@@ -4,11 +4,13 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import '@fortawesome/fontawesome-free/js/all.js';
 import './main.css';
 
-const refresh = document.querySelector('#refresh');
-const submit = document.querySelector('#submit');
+const refresh = document.getElementById('refresh');
+const submit = document.getElementById('submit');
 const nameInput = document.getElementById('name');
 const scoreInput = document.getElementById('score');
 const recentSores = document.querySelector('#recent-scores');
+
+document.getElementById('heading').textContent = 'Leadership';
 
 const submitData = async () => {
   const response = await fetch(
@@ -25,11 +27,13 @@ const submitData = async () => {
     },
   );
   const dataSent = await response.json();
-  //return dataSent;
-  console.log(dataSent);
+  nameInput.value = '';
+  scoreInput.value = '';
+  return dataSent;
+  //console.log("test");
 };
 
-submit.addEventListener('submit', submitData);
+submit.addEventListener('click', submitData);
 
 const getScore = (name, score) => {
   const displayData = `<tr>
