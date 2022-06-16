@@ -4,7 +4,10 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import '@fortawesome/fontawesome-free/js/all.js';
 import './main.css';
 
-
+const refresh = document.querySelector('#refresh');
+const submit = document.querySelector('#submit');
+const nameInput = document.getElementById('name');
+const scoreInput = document.getElementById('score');
 
 const GenerateID = async () => {
   const response = await fetch(
@@ -25,9 +28,9 @@ const GenerateID = async () => {
 };
 GenerateID();
 
-const sendData = async () => {
+const submitData = async () => {
   const response = await fetch(
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/5kwd9qE46jjunPWk6sVg/scores',
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/THNeemmj46ormQIqw0UT/scores',
     {
       method: 'POST',
       body: JSON.stringify({
@@ -43,7 +46,7 @@ const sendData = async () => {
   return dataSent;
 };
 
-submit.addEventListener('submit', sendData);
+submit.addEventListener('submit', submitData);
 
 
 
