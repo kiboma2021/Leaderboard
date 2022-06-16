@@ -56,6 +56,9 @@ input {
   height: 30px;
   width: 80px;
   align-self: flex-end;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
 }
 
 .ScoreContainer {
