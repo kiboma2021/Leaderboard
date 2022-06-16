@@ -30,7 +30,6 @@ const submitData = async () => {
   nameInput.value = '';
   scoreInput.value = '';
   return dataSent;
-  //console.log("test");
 };
 
 submit.addEventListener('click', submitData);
