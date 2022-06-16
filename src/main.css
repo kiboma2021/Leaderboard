@@ -92,7 +92,7 @@ footer {
 
 #heading {
   color: rgb(21, 21, 143);
-  
+  text-shadow: 2px 2px 0px #ff0000;
 }
 
 .footer {
